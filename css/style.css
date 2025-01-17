@@ -1,0 +1,59 @@
+/* Body styling */
+body {
+    background-color: rgba(45, 45, 45, 0.552);
+    margin: 0; /* Remove default body margin to ensure full width coverage */
+    padding-top: 50px; /* Add padding to account for fixed header height */
+}
+.content {
+    text-align: center;
+    margin: 20px;
+}
+
+/* Header styling */
+.header {
+    background-color: #2A2929;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    margin: 0; /* Ensure header spans the full width */
+    position: fixed; /* Keep the header fixed at the top */
+    top: 0;
+    width: 100%; /* Full width header */
+    z-index: 1000; /* Ensure it stays on top of other elements */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* Optional: Add shadow for better visuals */
+}
+/* Sidebar styling */
+.sidebar {
+    background-color: #2A2929;
+    margin: 0;
+    padding: 10px;
+    font-size: 18px;
+    color: white;
+    display: block;
+    text-decoration: none;
+    position: fixed;
+    top: 50px; /* Adjust for fixed header height */
+    left: -110px; /* Start hidden for animation */
+    height: calc(100% - 50px);
+    width: 100px;
+    transition: left 0.3s ease; /* Smooth animation for sliding */
+}
+
+/* Sidebar visible state */
+.sidebar:hover {
+    left: 0; /* Slide in when hovered */
+}
+
+/* Sidebar link hover effect */
+.sidebar a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 10px 0;
+    text-align: center;
+    transition: background-color 0.3s ease; /* Smooth hover effect */
+}
+
+.sidebar a:hover {
+    background-color: #575757;
+}
