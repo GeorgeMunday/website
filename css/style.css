@@ -2,11 +2,10 @@
 body {
     background-color: rgba(45, 45, 45, 0.552);
     margin: 0; /* Remove default body margin to ensure full width coverage */
-    padding-top: 50px; /* Add padding to account for fixed header height */
+    padding-top: 200px; /* Add padding to account for fixed header height */
 }
 .content {
     text-align: center;
-    margin: 20px;
 }
 
 /* Header styling */
@@ -22,22 +21,29 @@ body {
     z-index: 1000; /* Ensure it stays on top of other elements */
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* Optional: Add shadow for better visuals */
 }
+
+.header img {
+    float: left; /* Make the image float to the left */
+    margin: 15px; /* Optional: Add some space between the image and the text */
+    width: 3%;
+    height: 3%;
+}
 /* Sidebar styling */
 .sidebar {
     background-color: #2A2929;
     margin: 0;
     padding: 10px;
-    font-size: 18px;
+    font-size: 16px;
     color: white;
     display: block;
     text-decoration: none;
     position: fixed;
-    top: 50px; /* Adjust for fixed header height */
-    left: -110px; /* Start hidden for animation */
+    top: 120px; /* Adjust for fixed header height */
+    left: -90px; /* Start hidden for animation */
     height: calc(100% - 50px);
     width: 100px;
     transition: left 0.3s ease; /* Smooth animation for sliding */
-
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
 }
 
 /* Sidebar visible state */
@@ -54,7 +60,6 @@ body {
     text-align: center;
     transition: background-color 0.3s ease; /* Smooth hover effect */
 }
-
 .sidebar a:hover {
     background-color: #575757;
 }
