@@ -37,6 +37,7 @@ body {
     height: calc(100% - 50px);
     width: 100px;
     transition: left 0.3s ease; /* Smooth animation for sliding */
+
 }
 
 /* Sidebar visible state */
