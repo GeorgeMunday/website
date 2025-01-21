@@ -1,65 +1,103 @@
 /* Body styling */
+@font-face{font-family: JanNi; src: url('/fonts/January Night.ttf');}
 body {
-    background-color: rgba(45, 45, 45, 0.552);
-    margin: 0; /* Remove default body margin to ensure full width coverage */
-    padding-top: 200px; /* Add padding to account for fixed header height */
+    background-color: #f0f8ff; /* Soft light blue for a calming background */
+    margin: 0; /* Remove default body margin */
+    padding-top: 300px; /* Adjust padding for a better fixed header experience */
+    min-height: 100vh; /* Ensure body takes full height */
+    font-family: JanNi, sans-serif; /* Set a clean font family */
+    color: #333333; /* Dark grey for better text contrast */
+    background-size: 100%; /* Make background image 100% */
+    background-image: url('/pictures/knaresborough-viaduct-again.jpg');
+    background-repeat: no-repeat;
 }
+/* Content styling */
 .content {
-    text-align: center;
+    font-size: 200%;
+    outline: 2px solid #4b88a2; /* Subtle blue for a polished border */
+    padding: 10px;
+    background-color: #ffffff; /* Crisp white for clarity */
+    text-align: left;
+    display: block; /* Change to block to ensure each line goes under one another */
+    color: #333333; /* Dark grey for text */
+    border-radius: 8px; /* Smooth edges for a modern look */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add subtle shadow */
+    margin: 0 auto; /* Center the box horizontally */
+    max-width: 1000px; /* Optional: limit the width of the content */
 }
-
 /* Header styling */
 .header {
-    background-color: #2A2929;
-    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #4b88a2; /* Deep blue for elegance */
+    color: #ffffff; /* White for text contrast */
     text-align: center;
-    padding: 10px;
-    margin: 0; /* Ensure header spans the full width */
-    position: fixed; /* Keep the header fixed at the top */
-    top: 0;
-    width: 100%; /* Full width header */
-    z-index: 1000; /* Ensure it stays on top of other elements */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* Optional: Add shadow for better visuals */
-}
-
-.header img {
-    float: left; /* Make the image float to the left */
-    margin: 15px; /* Optional: Add some space between the image and the text */
-    width: 3%;
-    height: 3%;
-}
-/* Sidebar styling */
-.sidebar {
-    background-color: #2A2929;
+    padding: 5px 0;
     margin: 0;
-    padding: 10px;
-    font-size: 16px;
-    color: white;
-    display: block;
-    text-decoration: none;
     position: fixed;
-    top: 120px; /* Adjust for fixed header height */
-    left: -90px; /* Start hidden for animation */
-    height: calc(100% - 50px);
-    width: 100px;
-    transition: left 0.3s ease; /* Smooth animation for sliding */
+    top: 0;
+    width: 100%;
+    z-index: 10; /* Keep header on top */
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    box-sizing: border-box; /* Include padding in width/height */
+    font-size: 2.2em; /* Slightly bigger text for header */
+    box-sizing: border-box;
+    border-radius: 0 8px 8px 0;
 }
 
-/* Sidebar visible state */
-.sidebar:hover {
-    left: 0; /* Slide in when hovered */
+/* Sidebar styling */
+.navbar {
+    background-color: #6ea7bf; /* Softer blue for navbar */
+    padding: 20px;
+    font-size: 30px;
+    color: #ffffff; /* White for better contrast */
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    top: 180px; /* Adjust to be under the header */
+    width: 100%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    box-sizing: border-box;
+    border-radius: 0 0 8px 8px; /* Smooth edges on the bottom */
+    z-index: 9; /* Ensure it stays below the header */
 }
-
-/* Sidebar link hover effect */
-.sidebar a {
+text{
+    display: none;
+}
+.navbar:hover {
+    width: 100%; /* Expand the navbar to full width on hover */
+}
+/* Navbar link styling */
+.navbar a {
     display: block;
-    color: white;
+    color: #ffffff; /* White links */
     text-decoration: none;
-    padding: 10px 0;
+    padding: 10px 20px;
     text-align: center;
-    transition: background-color 0.3s ease; /* Smooth hover effect */
+    transition: background-color 0.5s ease; /* Longer transition for background color */
 }
-.sidebar a:hover {
-    background-color: #575757;
+
+/* Navbar link hover effect */
+.navbar a:hover {
+    background-color: #8abbd0; /* Lighter blue on hover */
+}
+
+
+
+/* Responsive Design: Make sure sidebar works on smaller screens */
+@media screen and (max-width: 768px) {
+    .header {
+        padding: 1px 0;
+    }
+    .navbar {
+        top: 90px; /* Adjust for the fixed header */
+        left: -5px; /* Start further off-screen on small devices */
+        width: 80px; /* Narrower sidebar */
+        font-size: 14px; /* Smaller text size */
+        margin: 1;
+    }
+    .navbar:hover {
+        left: 0;
+    }
 }
