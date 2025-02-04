@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <link rel="stylesheet" href="/css/style.css">
+  <script src="/java/script.js"></script>
 </head>
 <body>
   <div class="header">
@@ -28,6 +29,7 @@
         <a href="#">Link 3</a>
       </div>
     </div>
+    
     <div class="dropdown">
       <button class="dropbtn">Contact</button>
       <div class="dropdown-content">
@@ -68,8 +70,13 @@
     <iframe width="500" height="350" src="https://www.youtube.com/embed/wGVqBjyKHfQ?autohide=1" 
       frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
     </iframe>
-  
   </div>
+  <form id="searchForm" onsubmit="return searchText()">
+    <input type="text" id="searchInput" placeholder="Search.." name="search">
+    <button type="submit"><i class="fa fa-search"></i> Search</button>
+  </form>
+  <button id="nextButton" onclick="nextMatch()">Next</button>
+  <button id="prevButton" onclick="prevMatch()">Previous</button>
 
 </body>
 </html>
